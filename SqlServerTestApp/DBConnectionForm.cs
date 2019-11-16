@@ -55,5 +55,15 @@ namespace SqlServerTestApp
         {
             this.CloseForm();
         }
+
+        private void serverBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usernameBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

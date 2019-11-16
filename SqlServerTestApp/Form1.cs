@@ -38,7 +38,9 @@ namespace SqlServerTestApp
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            Form frm2 = new RequestData();
+            frm2.Show();
+            this.Hide();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -88,9 +90,12 @@ namespace SqlServerTestApp
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Form  frm2 = new PositionAddForm();
-            frm2.Show();
-            this.Hide();
+            
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

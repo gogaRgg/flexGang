@@ -81,6 +81,7 @@
             this.dbNameBox.Name = "dbNameBox";
             this.dbNameBox.Size = new System.Drawing.Size(186, 20);
             this.dbNameBox.TabIndex = 2;
+            this.dbNameBox.Text = "Кулиминов";
             // 
             // usernameBox
             // 
@@ -88,6 +89,8 @@
             this.usernameBox.Name = "usernameBox";
             this.usernameBox.Size = new System.Drawing.Size(186, 20);
             this.usernameBox.TabIndex = 3;
+            this.usernameBox.Text = "aminkul";
+            this.usernameBox.TextChanged += new System.EventHandler(this.usernameBox_TextChanged);
             // 
             // userpassBox
             // 
@@ -96,6 +99,7 @@
             this.userpassBox.PasswordChar = '*';
             this.userpassBox.Size = new System.Drawing.Size(186, 20);
             this.userpassBox.TabIndex = 4;
+            this.userpassBox.Text = "igorigorigor";
             // 
             // connectButton
             // 
@@ -113,6 +117,8 @@
             this.serverBox.Name = "serverBox";
             this.serverBox.Size = new System.Drawing.Size(186, 20);
             this.serverBox.TabIndex = 1;
+            this.serverBox.Text = ".\\sqlexpress";
+            this.serverBox.TextChanged += new System.EventHandler(this.serverBox_TextChanged);
             // 
             // DBConnectionForm
             // 

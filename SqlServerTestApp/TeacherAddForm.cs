@@ -56,7 +56,7 @@ namespace SqlServerTestApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.OpenNewForm<PositionAddForm>();
+            
         }
 
         private void comboBox1_DropDown(object sender, EventArgs e)
