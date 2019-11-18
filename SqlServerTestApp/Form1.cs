@@ -26,15 +26,9 @@ namespace SqlServerTestApp
             this.OpenNewForm<DBConnectionForm>();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.OpenNewForm<StudyLoadAddForm>();
-        }
+       
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.OpenNewForm<TeacherAddForm>();
-        }
+       
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -43,30 +37,7 @@ namespace SqlServerTestApp
             this.Hide();
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            string query = "select (teacher.first_name+' '+teacher.last_name+' '+teacher.sur_name), discipline.name, study_group.name " +
-                "from study_load , teacher, discipline, study_group " +
-                "where teacher.id = study_load.teacher_id and " +
-                "study_group.id = study_load.group_id and " +
-                "discipline.id = study_load.discipline_id;"
-                ;
-            var list = DBConnectionService.SendQueryToSqlServer(query);
-            if (list == null || !list.Any())
-            {
-                return;
-            }
-            dataGridView1.Rows.Clear();
-            dataGridView1.Columns.Clear();
-            dataGridView1.Columns.Add("Teacher", "Teacher");
-            dataGridView1.Columns.Add("Discipline", "Discipline");
-            dataGridView1.Columns.Add("Group", "Group");
-            foreach(var row in list)
-            {
-                dataGridView1.Rows.Add(row[0], row[1], row[2]);
-            }
-            dataGridView1.Refresh();
-        }
+      
 
         private void button7_Click(object sender, EventArgs e)
         {
@@ -83,19 +54,35 @@ namespace SqlServerTestApp
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void button9_Click(object sender, EventArgs e)
         {
-            
+            Form frm2 = new Form1337();
+            frm2.Show();
+            this.Hide();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Данная программа представляет собой тестировачный проект связанный с базой данных,и присдует цель ознакомления с подключением Бд к c# " +
+                "Выполнили Кулёв Игорь и Аминов Владислав ");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            Form frm2 = new QueryComplete();
+            frm2.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

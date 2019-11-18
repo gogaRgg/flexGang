@@ -18,5 +18,20 @@ namespace SqlServerTestApp
                 thisForm.Owner.Enabled = true;
             }
         }
+
+        public static void ClearAndAddColumnsInDataGridView(DataGridView dataGrid, params string[] str)
+        {
+            dataGrid.Rows.Clear();
+            dataGrid.Columns.Clear();
+            foreach (string s in str)
+            {
+                dataGrid.Columns.Add(s, s);
+            }
+        }
+
+        public static void ClearAndAddColumnsInDataGridView(DataGridView dataGrid, string str)
+        {
+            ClearAndAddColumnsInDataGridView(dataGrid, new string[] { str });
+        }
     }
 }

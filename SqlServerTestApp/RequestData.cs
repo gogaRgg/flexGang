@@ -29,6 +29,11 @@ namespace SqlServerTestApp
             }
         }
 
+        private void ClearAndAddColumnsInDataGridView(DataGridView dataGrid, string str)
+        {
+            ClearAndAddColumnsInDataGridView(dataGrid, new string[] { str });
+        }
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -98,6 +103,13 @@ namespace SqlServerTestApp
         {
             dataGridView1.Rows.Clear();
             dataGridView1.Columns.Clear();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form frm2 = new QueryComplete();
+            frm2.Show();
+            this.Hide();
         }
     }
 }

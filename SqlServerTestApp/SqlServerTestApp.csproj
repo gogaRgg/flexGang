@@ -43,6 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form1337.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include=".Designer.cs">
+      <DependentUpon>Form1337.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DBConnectionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +67,12 @@
     <Compile Include="ISqlReadable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryComplete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueryComplete.Designer.cs">
+      <DependentUpon>QueryComplete.cs</DependentUpon>
+    </Compile>
     <Compile Include="RequestData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +97,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1337.resx">
+      <DependentUpon>Form1337.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -93,6 +109,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QueryComplete.resx">
+      <DependentUpon>QueryComplete.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RequestData.resx">
       <DependentUpon>RequestData.cs</DependentUpon>
     </EmbeddedResource>
