@@ -9,8 +9,10 @@ using System.Windows.Forms;
 
 namespace SqlServerTestApp
 {
-    public partial class Salleraddform : Form
+    public partial class Salleraddform : Form 
+
     {
+        
         public Salleraddform()
         {
             InitializeComponent();
@@ -21,7 +23,7 @@ namespace SqlServerTestApp
             string tb1 = textBox1.Text;
             string tb2 = textBox2.Text;
             string tb3 = textBox3.Text;
-            string tb4 = textBox4.Text;
+            string tb4 =textBox4.Text;
             string tb5 = textBox5.Text;
             string tb6 = textBox6.Text;
             string query = "INSERT INTO dbo.Клиенты (Фамилия, Имя,Отчество,Телефон,Email,Постоянный) VALUES ('" + tb1 + "', '" + tb2 + "','" + tb3 + "','" + tb4 + "','" + tb5 + "','" + tb6 + "')";
@@ -33,6 +35,47 @@ namespace SqlServerTestApp
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string query = @"SELECT [id_клиента]
+            ,[Фамилия]
+            ,[Имя]
+            ,[Отчество]
+ ,[Телефон] ,[Email] ,[Постоянный]
+            FROM [dbo].[Клиенты]";
+            var list = DBConnectionService.SendQueryToSqlServer(query);
+            FormExtentions.ClearAndAddColumnsInDataGridView(dataGridView1, "Фамилия", "Имя", "Отчество", "Email", "Постоянный");
+            foreach (var row in list)
+            {
+                dataGridView1.Rows.Add(row[0], row[1], row[2], row[3], row[4]);
+            }
         }
     }
 }

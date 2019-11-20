@@ -43,5 +43,10 @@ namespace SqlServerTestApp
             comboBox1.Items.Clear();
             comboBox1.Items.AddRange(list);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -87,7 +87,7 @@ namespace SqlServerTestApp
 
         private void button7_Click_1(object sender, EventArgs e)
         {
-            Form frm2 = new Salleraddform();
+            Form frm2 = new JustForm();
             frm2.Show();
             this.Hide();
         }
