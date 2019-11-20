@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addform.Designer.cs">
+      <DependentUpon>addform.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1337.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,18 +85,15 @@
     <Compile Include="RequestData.Designer.cs">
       <DependentUpon>RequestData.cs</DependentUpon>
     </Compile>
-    <Compile Include="StudyLoadAddForm.cs">
+    <Compile Include="Salleraddform.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudyLoadAddForm.Designer.cs">
-      <DependentUpon>StudyLoadAddForm.cs</DependentUpon>
+    <Compile Include="Salleraddform.Designer.cs">
+      <DependentUpon>Salleraddform.cs</DependentUpon>
     </Compile>
-    <Compile Include="TeacherAddForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TeacherAddForm.Designer.cs">
-      <DependentUpon>TeacherAddForm.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="addform.resx">
+      <DependentUpon>addform.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DBConnectionForm.resx">
       <DependentUpon>DBConnectionForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,11 +118,8 @@
     <EmbeddedResource Include="RequestData.resx">
       <DependentUpon>RequestData.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StudyLoadAddForm.resx">
-      <DependentUpon>StudyLoadAddForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TeacherAddForm.resx">
-      <DependentUpon>TeacherAddForm.cs</DependentUpon>
+    <EmbeddedResource Include="Salleraddform.resx">
+      <DependentUpon>Salleraddform.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

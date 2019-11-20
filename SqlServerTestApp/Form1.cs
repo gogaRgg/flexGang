@@ -84,5 +84,12 @@ namespace SqlServerTestApp
         {
             this.Close();
         }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            Form frm2 = new Salleraddform();
+            frm2.Show();
+            this.Hide();
+        }
     }
 }

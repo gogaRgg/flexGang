@@ -47,10 +47,11 @@
             this.ID,
             this.FIO,
             this.NAME});
-            this.dataGridView1.Location = new System.Drawing.Point(-5, 1);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 1);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(594, 451);
+            this.dataGridView1.Size = new System.Drawing.Size(600, 451);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // ID
             // 
@@ -79,7 +80,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(609, 44);
+            this.button2.Location = new System.Drawing.Point(609, 57);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(109, 37);
             this.button2.TabIndex = 4;
@@ -89,7 +90,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(609, 87);
+            this.button3.Location = new System.Drawing.Point(609, 109);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(109, 37);
             this.button3.TabIndex = 5;
@@ -99,7 +100,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(609, 130);
+            this.button4.Location = new System.Drawing.Point(609, 162);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(109, 37);
             this.button4.TabIndex = 6;
@@ -109,7 +110,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(609, 173);
+            this.button5.Location = new System.Drawing.Point(612, 409);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(109, 35);
             this.button5.TabIndex = 7;
@@ -121,6 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(730, 450);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);

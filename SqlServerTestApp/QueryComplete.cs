@@ -51,7 +51,24 @@ namespace SqlServerTestApp
 
         private void label1_Click(object sender, EventArgs e)
         {
+          
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string query = @"select [dbo].[Продавец].[ФИО], [dbo].[Клиенты].[Фамилия]+[dbo].[Клиенты].[Имя]+[dbo].[Клиенты].[Отчество]
+            from [dbo].[Клиенты], [dbo].[Продавец], (Select distinct id_клиента,id_продавца
+            from Продажи ) as t
+where[dbo].[Продавец].[id_продавца] = t.id_продавца and[dbo].[Клиенты].[id_клиента] = t.id_клиента";
+            var list = DBConnectionService.SendQueryToSqlServer(query);
+            FormExtentions.ClearAndAddColumnsInDataGridView(dataGridView1, "id_продавца","id_товара");
+            foreach (var row in list)
+            {
+                dataGridView1.Rows.Add(row[0], row[1]);
+            }
 
         }
+
+
     }
 }
