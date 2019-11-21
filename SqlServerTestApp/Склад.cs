@@ -9,52 +9,36 @@ using System.Windows.Forms;
 
 namespace SqlServerTestApp
 {
-    public partial class Товары : Form
+    public partial class Склад : Form
     {
-        public Товары()
+        public Склад()
         {
             InitializeComponent();
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             string tb1 = textBox1.Text;
-            string tb2 = textBox2.Text;
-            string query = "INSERT INTO dbo.Товары (название, Цена) VALUES ('" + tb1 + "', '" + tb2 + "')";
+            string query = "INSERT INTO dbo.Склад (адрес) VALUES ('" + tb1 + "')";
             int? count = DBConnectionService.SendCommandToSqlServer(query);
             MessageBox.Show("добавлено " + count + "строк");
-
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string query = @"SELECT [id_товара]
-            ,[название]
-            ,[Цена]
-           
-            FROM [dbo].[Товары]";
+            string query = @"SELECT 
+            [адрес]
+            FROM [dbo].[Склад]";
             var list = DBConnectionService.SendQueryToSqlServer(query);
-            FormExtentions.ClearAndAddColumnsInDataGridView(dataGridView1, "id_товара","название","Цена");
+            FormExtentions.ClearAndAddColumnsInDataGridView(dataGridView1, "адрес");
             foreach (var row in list)
             {
-                dataGridView1.Rows.Add(row[0], row[1], row[2]);
+                dataGridView1.Rows.Add(row[0]);
             }
-
-        }
-
-        private void Товары_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
             Form frm2 = new JustForm();
             frm2.Show();
             this.Hide();

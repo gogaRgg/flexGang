@@ -23,10 +23,10 @@ namespace SqlServerTestApp
             string tb1 = textBox1.Text;
             string tb2 = textBox2.Text;
             string tb3 = textBox3.Text;
-            string tb4 =textBox4.Text;
+            string tb4 = textBox4.Text;
             string tb5 = textBox5.Text;
             string tb6 = textBox6.Text;
-            string query = "INSERT INTO dbo.Клиенты (Фамилия, Имя,Отчество,Телефон,Email,Постоянный) VALUES ('" + tb1 + "', '" + tb2 + "','" + tb3 + "','" + tb4 + "','" + tb5 + "','" + tb6 + "')";
+            string query = "INSERT INTO dbo.Клиенты (Фамилия, Имя,Отчество,Телефон,Email,Постоянный) VALUES ('" + tb1 + "', '" + tb2 + "','" + tb3 + "','" + tb4 + "','" + tb5 + "','" + tb6+ "')";
             int? count = DBConnectionService.SendCommandToSqlServer(query);
             MessageBox.Show("добавлено " + count + "строк");
 
@@ -64,18 +64,53 @@ namespace SqlServerTestApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string query = @"SELECT [id_клиента]
-            ,[Фамилия]
+            string query = @"SELECT 
+            [Фамилия]
             ,[Имя]
             ,[Отчество]
- ,[Телефон] ,[Email] ,[Постоянный]
+            ,[Телефон]
+            ,[Email] 
+            ,[Постоянный]
             FROM [dbo].[Клиенты]";
             var list = DBConnectionService.SendQueryToSqlServer(query);
-            FormExtentions.ClearAndAddColumnsInDataGridView(dataGridView1, "Фамилия", "Имя", "Отчество", "Email", "Постоянный");
+            FormExtentions.ClearAndAddColumnsInDataGridView(dataGridView1,"Фамилия","Имя","Отчество","Телефон","Email","Постоянный");
             foreach (var row in list)
             {
-                dataGridView1.Rows.Add(row[0], row[1], row[2], row[3], row[4]);
+                dataGridView1.Rows.Add(row[0], row[1], row[2], row[3], row[4], row[5]);
             }
+        }
+
+        private void Salleraddform_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            Form frm2 = new JustForm();
+            frm2.Show();
+            this.Hide();
         }
     }
 }

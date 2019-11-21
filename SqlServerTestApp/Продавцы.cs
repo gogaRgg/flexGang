@@ -28,8 +28,8 @@ namespace SqlServerTestApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string query = @"SELECT [id_продавца]
-            ,[ФИО]
+            string query = @"SELECT
+            [ФИО]
             ,[название магазина]
             FROM [dbo].[Продавец]";
             var list = DBConnectionService.SendQueryToSqlServer(query);
@@ -38,6 +38,19 @@ namespace SqlServerTestApp
             {
                 dataGridView1.Rows.Add(row[0], row[1]);
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            Form frm2 = new JustForm();
+            frm2.Show();
+            this.Hide();
+        }
+
+        private void Продавцы_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

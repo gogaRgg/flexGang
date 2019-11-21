@@ -103,6 +103,24 @@
     <Compile Include="Продавцы.Designer.cs">
       <DependentUpon>Продавцы.cs</DependentUpon>
     </Compile>
+    <Compile Include="Продажи.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Продажи.Designer.cs">
+      <DependentUpon>Продажи.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Скидки.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Скидки.Designer.cs">
+      <DependentUpon>Скидки.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Склад.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Склад.Designer.cs">
+      <DependentUpon>Склад.cs</DependentUpon>
+    </Compile>
     <Compile Include="Товары.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +162,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Продавцы.resx">
       <DependentUpon>Продавцы.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Продажи.resx">
+      <DependentUpon>Продажи.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Скидки.resx">
+      <DependentUpon>Скидки.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Склад.resx">
+      <DependentUpon>Склад.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Товары.resx">
       <DependentUpon>Товары.cs</DependentUpon>
