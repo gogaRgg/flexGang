@@ -37,7 +37,7 @@ namespace SqlServerTestApp
             
             FROM [dbo].[Товары]";
             var list = DBConnectionService.SendQueryToSqlServer(query);
-            FormExtentions.ClearAndAddColumnsInDataGridView(dataGridView1, "Цена", "название");
+            FormExtentions.ClearAndAddColumnsInDataGridView(dataGridView1, "id_товара", "Цена", "название");
             foreach (var row in list)
             {
                 dataGridView1.Rows.Add(row[0], row[1], row[2]);
