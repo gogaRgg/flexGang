@@ -18,7 +18,9 @@ namespace SqlServerTestApp
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            Form frm2 = new Запрос5();
+            frm2.Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -69,6 +71,16 @@ where[dbo].[Продавец].[id_продавца] = t.id_продавца and[
 
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form frm2 = new Запрос_6();
+            frm2.Show();
+            this.Hide();
+        }
 
+        private void QueryComplete_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -97,6 +97,18 @@
     <Compile Include="Salleraddform.Designer.cs">
       <DependentUpon>Salleraddform.cs</DependentUpon>
     </Compile>
+    <Compile Include="Запрос 6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Запрос 6.Designer.cs">
+      <DependentUpon>Запрос 6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Запрос5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Запрос5.Designer.cs">
+      <DependentUpon>Запрос5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Продавцы.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +138,24 @@
     </Compile>
     <Compile Include="Товары.Designer.cs">
       <DependentUpon>Товары.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Удаление.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Удаление.Designer.cs">
+      <DependentUpon>Удаление.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Удалениеклиента.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Удалениеклиента.Designer.cs">
+      <DependentUpon>Удалениеклиента.cs</DependentUpon>
+    </Compile>
+    <Compile Include="удалениетовара.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="удалениетовара.Designer.cs">
+      <DependentUpon>удалениетовара.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="addform.resx">
       <DependentUpon>addform.cs</DependentUpon>
@@ -160,6 +190,12 @@
     <EmbeddedResource Include="Salleraddform.resx">
       <DependentUpon>Salleraddform.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Запрос 6.resx">
+      <DependentUpon>Запрос 6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Запрос5.resx">
+      <DependentUpon>Запрос5.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Продавцы.resx">
       <DependentUpon>Продавцы.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +210,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Товары.resx">
       <DependentUpon>Товары.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Удаление.resx">
+      <DependentUpon>Удаление.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Удалениеклиента.resx">
+      <DependentUpon>Удалениеклиента.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="удалениетовара.resx">
+      <DependentUpon>удалениетовара.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
