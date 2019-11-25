@@ -123,7 +123,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(101, 295);
+            this.button5.Location = new System.Drawing.Point(121, 295);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 8;
@@ -170,7 +170,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(5, 295);
+            this.button6.Location = new System.Drawing.Point(12, 295);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 15;
@@ -250,6 +250,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(615, 365);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dateTimePicker2);
