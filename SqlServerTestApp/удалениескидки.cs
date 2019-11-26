@@ -9,19 +9,17 @@ using System.Windows.Forms;
 
 namespace SqlServerTestApp
 {
-    public partial class удалениетовара : Form
+    public partial class удалениескидки : Form
     {
-        public удалениетовара()
+        public удалениескидки()
         {
             InitializeComponent();
         }
 
-        
-
         private void button1_Click(object sender, EventArgs e)
         {
             int? id = Convert.ToInt32(((IdentityItem)comboBox1.SelectedItem)?.Id);
-            string query = "Delete from dbo.Товары where [id_товара]=" + id;
+            string query = "Delete from dbo.Скидки where [id_скидки]=" + id;
             int? result = DBConnectionService.SendCommandToSqlServer(query);
             if (result != null && result > 0)
             {
@@ -30,25 +28,30 @@ namespace SqlServerTestApp
             }
         }
 
+        private void удалениескидки_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
-            string query = @"SELECT [id_товара]
-            ,[Цена]
-            ,[название]
-            
-            FROM [dbo].[Товары]";
+
+            string query = @"SELECT 
+            [Размер скидки]
+            ,[Статус пользователя]
+           
+            FROM [dbo].[Скидки]";
             var list = DBConnectionService.SendQueryToSqlServer(query);
-            FormExtentions.ClearAndAddColumnsInDataGridView(dataGridView1, "id_товара", "Цена", "название");
+            FormExtentions.ClearAndAddColumnsInDataGridView(dataGridView1, "Размер скидки", "Статус пользователя");
             foreach (var row in list)
             {
-                dataGridView1.Rows.Add(row[0], row[1], row[2]);
+                dataGridView1.Rows.Add(row[0], row[1]);
             }
         }
 
         private void comboBox1_DropDown(object sender, EventArgs e)
         {
-
-            string query = "select [id_товара],[Название] from [dbo].[Товары]";
+            string query = "select [id_скидки],[Размер скидки]+' '+[Статус пользователя] from [dbo].[Скидки]";
             var list = DBConnectionService.SendQueryToSqlServer(query)?.Select(row => new IdentityItem(row[0], row[1])).ToArray();
             comboBox1.Items.Clear();
             comboBox1.Items.AddRange(list);

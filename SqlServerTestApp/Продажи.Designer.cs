@@ -49,6 +49,8 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,7 +125,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(121, 295);
+            this.button5.Location = new System.Drawing.Point(120, 263);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 8;
@@ -170,11 +172,11 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(12, 295);
+            this.button6.Location = new System.Drawing.Point(120, 292);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 15;
-            this.button6.Text = "назад";
+            this.button6.Text = "Назад";
             this.button6.UseVisualStyleBackColor = true;
             // 
             // label5
@@ -241,17 +243,40 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(293, 15);
+            this.dataGridView1.Location = new System.Drawing.Point(317, 15);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(310, 303);
+            this.dataGridView1.Size = new System.Drawing.Size(693, 303);
             this.dataGridView1.TabIndex = 23;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(201, 263);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(86, 23);
+            this.button7.TabIndex = 24;
+            this.button7.Text = "Просмотреть ";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(202, 292);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(85, 23);
+            this.button8.TabIndex = 25;
+            this.button8.Text = "Удалить";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // Продажи
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(615, 365);
+            this.ClientSize = new System.Drawing.Size(1014, 321);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
@@ -305,5 +330,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
     }
 }

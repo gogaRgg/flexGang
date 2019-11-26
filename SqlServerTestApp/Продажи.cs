@@ -147,7 +147,7 @@ namespace SqlServerTestApp
                 MessageBox.Show(exc.Message);
             }
 
-            string query = $"insert into продажи ([id_клиента],[id_tovara],[id_продавца],[скидки],[вид оплаты],[Дата продажи],[Дата доставки]) values ({cb1},{cb2},{cb3},{cb5},'{cb4}',{tb1},{tb2})";
+            string query = $"insert into dbo.Продажи ([id_клиента],[id_tovara],[id_продавца],[id_скидки],[вид оплаты],[Дата продажи],[Дата доставки]) values ({cb1},{cb2},{cb3},{cb5},'{cb4}','{tb1}','{tb2}')";
             int? count = DBConnectionService.SendCommandToSqlServer(query);
             MessageBox.Show("добавлено " + count + "строк");
         }
@@ -171,6 +171,44 @@ namespace SqlServerTestApp
             Form frm2 = new Скидки1();
             frm2.Show();
             this.Hide();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            string query = @"SELECT 
+            [id_продажи]
+            ,[id_tovara]
+            ,[id_клиента]
+            ,[id_скидки]
+            ,[Дата продажи] 
+            ,[Дата доставки]
+            ,[вид оплаты]
+            ,[id_продавца]
+            FROM [dbo].[Продажи]";
+            var list = DBConnectionService.SendQueryToSqlServer(query);
+            FormExtentions.ClearAndAddColumnsInDataGridView(dataGridView1, "id_продажи", "id_tovara", "id_клиента", "id_скидки", "Дата продажи", "Дата доставки", "вид оплаты", "id_продавца");
+            foreach (var row in list)
+            {
+                dataGridView1.Rows.Add(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7]);
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+            int n = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            string query = "delete From Продажи where id_продажи='"+n+"'" ;
+                int? result = DBConnectionService.SendCommandToSqlServer(query);
+            if (result != null && result > 0)
+            {
+                MessageBox.Show("done");
+                comboBox1.SelectedItem = null;
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -49,13 +49,6 @@
     <Compile Include="addform.Designer.cs">
       <DependentUpon>addform.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1337.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include=".Designer.cs">
-      <DependentUpon>Form1337.cs</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="DBConnectionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +102,48 @@
     <Compile Include="Запрос5.Designer.cs">
       <DependentUpon>Запрос5.cs</DependentUpon>
     </Compile>
+    <Compile Include="Измемениепродавца.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Измемениепродавца.Designer.cs">
+      <DependentUpon>Измемениепродавца.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Измемениепродажи.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Измемениепродажи.Designer.cs">
+      <DependentUpon>Измемениепродажи.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Измемениескидки.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Измемениескидки.Designer.cs">
+      <DependentUpon>Измемениескидки.cs</DependentUpon>
+    </Compile>
+    <Compile Include="изменение склада.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="изменение склада.Designer.cs">
+      <DependentUpon>изменение склада.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Изменение.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Изменение.Designer.cs">
+      <DependentUpon>Изменение.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Изменениеклиента.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Изменениеклиента.Designer.cs">
+      <DependentUpon>Изменениеклиента.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Изменениетовара.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Изменениетовара.Designer.cs">
+      <DependentUpon>Изменениетовара.cs</DependentUpon>
+    </Compile>
     <Compile Include="Продавцы.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +186,24 @@
     <Compile Include="Удалениеклиента.Designer.cs">
       <DependentUpon>Удалениеклиента.cs</DependentUpon>
     </Compile>
+    <Compile Include="удалениепродавца.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="удалениепродавца.Designer.cs">
+      <DependentUpon>удалениепродавца.cs</DependentUpon>
+    </Compile>
+    <Compile Include="удалениескидки.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="удалениескидки.Designer.cs">
+      <DependentUpon>удалениескидки.cs</DependentUpon>
+    </Compile>
+    <Compile Include="удалениесклада.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="удалениесклада.Designer.cs">
+      <DependentUpon>удалениесклада.cs</DependentUpon>
+    </Compile>
     <Compile Include="удалениетовара.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,9 +218,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1337.resx">
-      <DependentUpon>Form1337.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JustForm.resx">
       <DependentUpon>JustForm.cs</DependentUpon>
@@ -196,6 +246,15 @@
     <EmbeddedResource Include="Запрос5.resx">
       <DependentUpon>Запрос5.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Изменение.resx">
+      <DependentUpon>Изменение.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Изменениеклиента.resx">
+      <DependentUpon>Изменениеклиента.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Изменениетовара.resx">
+      <DependentUpon>Изменениетовара.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Продавцы.resx">
       <DependentUpon>Продавцы.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +275,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Удалениеклиента.resx">
       <DependentUpon>Удалениеклиента.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="удалениепродавца.resx">
+      <DependentUpon>удалениепродавца.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="удалениескидки.resx">
+      <DependentUpon>удалениескидки.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="удалениесклада.resx">
+      <DependentUpon>удалениесклада.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="удалениетовара.resx">
       <DependentUpon>удалениетовара.cs</DependentUpon>
