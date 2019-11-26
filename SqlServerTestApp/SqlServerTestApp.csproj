@@ -246,6 +246,9 @@
     <EmbeddedResource Include="Запрос5.resx">
       <DependentUpon>Запрос5.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="изменение склада.resx">
+      <DependentUpon>изменение склада.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Изменение.resx">
       <DependentUpon>Изменение.cs</DependentUpon>
     </EmbeddedResource>

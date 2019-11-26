@@ -38,5 +38,13 @@ namespace SqlServerTestApp
             frm2.Show();
             this.Hide();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form frm2 = new изменение_склада();
+            frm2.Show();
+            this.Hide();
+
+        }
     }
 }

@@ -15,5 +15,51 @@ namespace SqlServerTestApp
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string query = @"SELECT 
+            [адрес]
+            FROM [dbo].[Склад]";
+            var list = DBConnectionService.SendQueryToSqlServer(query);
+            FormExtentions.ClearAndAddColumnsInDataGridView(dataGridView1, "адрес");
+            foreach (var row in list)
+            {
+                dataGridView1.Rows.Add(row[0]);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            string zz = null;
+            
+            try
+            {
+                zz = textBox1.Text;
+               
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            int n = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            string query = "update dbo.Склад SET адрес='" +zz+ "' where id_склада='" + n + "'";
+            int? result = DBConnectionService.SendCommandToSqlServer(query);
+            if (result != null && result > 0)
+            {
+                MessageBox.Show("Updated");
+
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form frm2 = new Изменение();
+            frm2.Show();
+            this.Hide();
+        }
     }
 }

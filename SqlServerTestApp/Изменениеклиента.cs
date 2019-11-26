@@ -36,16 +36,16 @@ namespace SqlServerTestApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string mn = null;
-            string nm = null;
+            string mm = null;
+            string nn = null;
             string nmm = null;
             string nmn = null;
             string nnn = null;
             string mmm = null;
             try
             {
-                mn = textBox1.Text;
-                nm = textBox2.Text;
+                mm = textBox1.Text;
+                nn = textBox2.Text;
                 nmm = textBox3.Text;
                 nmn = textBox4.Text;
                 nnn = textBox5.Text;
@@ -57,13 +57,12 @@ namespace SqlServerTestApp
                 return;
             }
 
-            int n = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-            string query = "update dbo.Клиенты SET Имя='" + mn + "',Фамилия='" + nm + "',Отчество='" + nmm + "',Телефон='" + nmn + "',Email ='" + nnn + "',Постоянный='" + mmm + "' where id_клиента='" + n + "'";
+            int kkk = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            string query = "update dbo.Клиенты SET Имя='" + mm + "',Фамилия='" + nn + "',Отчество='" + nmm + "',Телефон='" + nmn + "',Email ='" + nnn + "',Постоянный='" + mmm + "' where [id_клиента]='" + kkk + "'";
             int? result = DBConnectionService.SendCommandToSqlServer(query);
             if (result != null && result > 0)
             {
                 MessageBox.Show("Updated");
-
             }
         }
 
@@ -100,6 +99,11 @@ namespace SqlServerTestApp
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
