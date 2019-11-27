@@ -37,15 +37,16 @@ namespace SqlServerTestApp
         {
 
             string query = @"SELECT 
+[id_скидки],
             [Размер скидки]
             ,[Статус пользователя]
            
             FROM [dbo].[Скидки]";
             var list = DBConnectionService.SendQueryToSqlServer(query);
-            FormExtentions.ClearAndAddColumnsInDataGridView(dataGridView1, "Размер скидки", "Статус пользователя");
+            FormExtentions.ClearAndAddColumnsInDataGridView(dataGridView1,"id_скидки", "Размер скидки", "Статус пользователя");
             foreach (var row in list)
             {
-                dataGridView1.Rows.Add(row[0], row[1]);
+                dataGridView1.Rows.Add(row[0], row[1], row[2]);
             }
         }
 

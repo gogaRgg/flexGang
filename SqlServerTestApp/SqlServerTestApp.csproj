@@ -108,12 +108,6 @@
     <Compile Include="Измемениепродавца.Designer.cs">
       <DependentUpon>Измемениепродавца.cs</DependentUpon>
     </Compile>
-    <Compile Include="Измемениепродажи.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Измемениепродажи.Designer.cs">
-      <DependentUpon>Измемениепродажи.cs</DependentUpon>
-    </Compile>
     <Compile Include="Измемениескидки.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,6 +239,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Запрос5.resx">
       <DependentUpon>Запрос5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Измемениепродавца.resx">
+      <DependentUpon>Измемениепродавца.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Измемениескидки.resx">
+      <DependentUpon>Измемениескидки.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="изменение склада.resx">
       <DependentUpon>изменение склада.cs</DependentUpon>

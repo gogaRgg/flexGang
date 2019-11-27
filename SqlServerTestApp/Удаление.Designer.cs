@@ -105,6 +105,7 @@
             this.button7.TabIndex = 6;
             this.button7.Text = "Назад";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // Удаление
             // 

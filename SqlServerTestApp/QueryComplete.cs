@@ -63,7 +63,7 @@ namespace SqlServerTestApp
             from Продажи ) as t
 where[dbo].[Продавец].[id_продавца] = t.id_продавца and[dbo].[Клиенты].[id_клиента] = t.id_клиента";
             var list = DBConnectionService.SendQueryToSqlServer(query);
-            FormExtentions.ClearAndAddColumnsInDataGridView(dataGridView1, "id_продавца","id_товара");
+            FormExtentions.ClearAndAddColumnsInDataGridView(dataGridView1, "id_продавца","id_клиента");
             foreach (var row in list)
             {
                 dataGridView1.Rows.Add(row[0], row[1]);

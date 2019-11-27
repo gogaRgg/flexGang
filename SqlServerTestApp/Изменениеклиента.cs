@@ -19,6 +19,7 @@ namespace SqlServerTestApp
         private void button1_Click(object sender, EventArgs e)
         {
             string query = @"SELECT 
+[id_клиента],
             [Фамилия]
             ,[Имя]
             ,[Отчество]
@@ -27,12 +28,12 @@ namespace SqlServerTestApp
             ,[Постоянный]
             FROM [dbo].[Клиенты]";
             var list = DBConnectionService.SendQueryToSqlServer(query);
-            FormExtentions.ClearAndAddColumnsInDataGridView(dataGridView1, "Фамилия", "Имя", "Отчество", "Телефон", "Email", "Постоянный");
+            FormExtentions.ClearAndAddColumnsInDataGridView(dataGridView1,"id_клиента","Фамилия", "Имя", "Отчество", "Телефон", "Email", "Постоянный");
             foreach (var row in list)
             {
-                dataGridView1.Rows.Add(row[0], row[1], row[2], row[3], row[4], row[5]);
+                dataGridView1.Rows.Add(row[0], row[1], row[2], row[3], row[4], row[5], row[6]);
             }
-        }
+        } 
 
         private void button2_Click(object sender, EventArgs e)
         {
