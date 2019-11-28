@@ -36,14 +36,14 @@ namespace SqlServerTestApp
         {
             int? cb1 = null;
             int? cb2 = null;
-            string tb1 = null;
+            int tb1 = null;
             
            
             try
             {
                 cb1 = Convert.ToInt32((comboBox1.SelectedItem as IdentityItem)?.Id);
                 cb2 = Convert.ToInt32((comboBox2.SelectedItem as IdentityItem)?.Id);
-                tb1 = Convert.ToString(textBox1.Text);
+                tb1 = Convert.ToInt32(textBox1.Text);
              
 
             }
@@ -52,7 +52,7 @@ namespace SqlServerTestApp
                 MessageBox.Show(exc.Message);
             }
 
-            string query = $"insert into dbo.Склад ([id_tovara],[id_склада],[количество]) values ({cb1},{cb2},'{tb1}')";
+            string query = $"insert into dbo.Склад ([id_tovara],[id_склада],[количество]) values ('{cb1}','{cb2}','{tb1}')";
             int? count = DBConnectionService.SendCommandToSqlServer(query);
             MessageBox.Show("добавлен");
         }
