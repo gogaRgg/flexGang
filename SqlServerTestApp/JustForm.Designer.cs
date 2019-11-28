@@ -118,6 +118,7 @@
             this.button8.TabIndex = 7;
             this.button8.Text = "Товары у продавца";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -137,6 +138,7 @@
             this.button10.TabIndex = 9;
             this.button10.Text = "Товар в продаже";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // JustForm
             // 

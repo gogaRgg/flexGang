@@ -212,6 +212,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Изменениеклиента";
             this.Text = "Изменениеклиента";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Изменениеклиента_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

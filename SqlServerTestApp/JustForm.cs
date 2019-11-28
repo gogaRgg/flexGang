@@ -23,55 +23,40 @@ namespace SqlServerTestApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form frm2 = new Salleraddform();
-            frm2.Show();
-            this.Hide();
+            this.OpenNewForm<Salleraddform>();
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form frm2 = new Продавцы();
-            frm2.Show();
-            this.Hide();
-
+            this.OpenNewForm<Продавцы>();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
 
-            Form frm2 = new Form1();
-            frm2.Show();
-            this.Hide();
+            this.OpenNewForm<Form1>();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Form frm2 = new Склад();
-            frm2.Show();
-            this.Hide();
+            this.OpenNewForm<Склад>();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
 
-            Form frm2 = new Скидки1();
-            frm2.Show();
-            this.Hide();
+            this.OpenNewForm<Скидки1>();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Form frm2 = new Продажи();
-            frm2.Show();
-            this.Hide();
+            this.OpenNewForm<Продажи>();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Form frm2 = new Товар_на_складе();
-            frm2.Show();
-            this.Hide();
+            this.OpenNewForm<Товар_на_складе>();
         }
 
         private void JustForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -82,6 +67,16 @@ namespace SqlServerTestApp
         private void JustForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            this.OpenNewForm<Товар_в_продаже>();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.OpenNewForm<Товары_у_продавца>();
         }
     }
 }

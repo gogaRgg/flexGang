@@ -39,14 +39,17 @@ namespace SqlServerTestApp
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form frm2 = new JustForm();
-            frm2.Show();
-            this.Hide();
+            this.OpenNewForm<JustForm>();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Склад_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.CloseForm();
         }
     }
 }

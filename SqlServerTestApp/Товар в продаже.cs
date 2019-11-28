@@ -25,5 +25,20 @@ namespace SqlServerTestApp
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.OpenNewForm<JustForm>();
+        }
+
+        private void Товар_в_продаже_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.CloseForm();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

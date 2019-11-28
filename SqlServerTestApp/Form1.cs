@@ -71,9 +71,7 @@ namespace SqlServerTestApp
         private void button3_Click(object sender, EventArgs e)
         {
 
-            Form frm2 = new QueryComplete();
-            frm2.Show();
-            this.Hide();
+            this.OpenNewForm<QueryComplete>();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -88,17 +86,13 @@ namespace SqlServerTestApp
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Form frm2 = new Удаление();
-            frm2.Show();
-            this.Hide();
+            this.OpenNewForm<Удаление>();
         }
 
         private void button4_Click_1(object sender, EventArgs e)
         {
 
-            Form frm2 = new Изменение();
-            frm2.Show();
-            this.Hide();
+            this.OpenNewForm<Изменение>();
         }
     }
 }

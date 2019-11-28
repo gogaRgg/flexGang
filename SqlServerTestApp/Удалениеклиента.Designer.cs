@@ -97,6 +97,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Удалениеклиента";
             this.Text = "Удалениеклиента";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Удалениеклиента_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

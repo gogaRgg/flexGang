@@ -18,52 +18,40 @@ namespace SqlServerTestApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form frm2 = new удалениетовара();
-            frm2.Show();
-            this.Hide();
+            this.OpenNewForm<удалениетовара>();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form frm2 = new Удалениеклиента();
-            frm2.Show();
-            this.Hide();
+            this.OpenNewForm<Удалениеклиента>();
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form frm2 = new удалениепродавца();
-            frm2.Show();
-            this.Hide();
+            this.OpenNewForm<удалениепродавца>();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Form frm2 = new удалениескидки();
-            frm2.Show();
-            this.Hide();
+            this.OpenNewForm<удалениескидки>();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Form frm2 = new удалениесклада();
-            frm2.Show();
-            this.Hide();
+            this.OpenNewForm<удалениесклада>();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Form frm2 = new Продажи();
-            frm2.Show();
-            this.Hide();
-        }
+        
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Form frm2 = new Form1();
-            frm2.Show();
-            this.Hide();
+            this.OpenNewForm<Form1>();
+        }
+
+        private void Удаление_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.CloseForm();
         }
     }
 }

@@ -200,6 +200,7 @@
             this.Controls.Add(this.button1);
             this.Name = "QueryComplete";
             this.Text = "QueryComplete";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.QueryComplete_FormClosed);
             this.Load += new System.EventHandler(this.QueryComplete_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

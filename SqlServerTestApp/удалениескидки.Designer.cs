@@ -96,6 +96,7 @@
             this.Controls.Add(this.button1);
             this.Name = "удалениескидки";
             this.Text = "удалениескидки";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.удалениескидки_FormClosed);
             this.Load += new System.EventHandler(this.удалениескидки_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

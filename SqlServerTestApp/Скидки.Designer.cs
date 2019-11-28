@@ -126,6 +126,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Скидки1";
             this.Text = "Скидки1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Скидки1_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

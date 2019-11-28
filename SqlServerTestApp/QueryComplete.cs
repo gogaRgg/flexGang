@@ -89,5 +89,10 @@ where[dbo].[Продавец].[id_продавца] = t.id_продавца and[
             frm2.Show();
             this.Hide();
         }
+
+        private void QueryComplete_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.CloseForm();
+        }
     }
 }

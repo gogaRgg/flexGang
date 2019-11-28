@@ -23,9 +23,7 @@ namespace SqlServerTestApp
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form frm2 = new Удаление();
-            frm2.Show();
-            this.Hide();
+            this.OpenNewForm<Удаление>();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -61,6 +59,11 @@ namespace SqlServerTestApp
             var list = DBConnectionService.SendQueryToSqlServer(query)?.Select(row => new IdentityItem(row[0], row[1])).ToArray();
             comboBox1.Items.Clear();
             comboBox1.Items.AddRange(list);
+        }
+
+        private void удалениесклада_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.CloseForm();
         }
     }
 }

@@ -96,6 +96,7 @@
             this.Controls.Add(this.comboBox1);
             this.Name = "удалениепродавца";
             this.Text = "удалениепродавца";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.удалениепродавца_FormClosed);
             this.Load += new System.EventHandler(this.удалениепродавца_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

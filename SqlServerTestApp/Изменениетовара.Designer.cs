@@ -125,6 +125,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Изменениетовара";
             this.Text = "Изменениетовара";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Изменениетовара_FormClosed);
             this.Load += new System.EventHandler(this.Изменениетовара_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

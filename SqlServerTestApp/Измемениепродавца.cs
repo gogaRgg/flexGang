@@ -59,9 +59,7 @@ namespace SqlServerTestApp
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form frm2 = new Изменение();
-            frm2.Show();
-            this.Hide();
+            this.OpenNewForm<Изменение>();
         }
     }
 }

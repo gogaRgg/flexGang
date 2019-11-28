@@ -60,15 +60,18 @@ namespace SqlServerTestApp
         private void button3_Click(object sender, EventArgs e)
         {
 
-            Form frm2 = new Изменение();
-            frm2.Show();
-            this.Hide();
+            this.OpenNewForm<Изменение>();
         }
 
         private void Изменениетовара_Load(object sender, EventArgs e)
         {
 
 
+        }
+
+        private void Изменениетовара_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.CloseForm();
         }
     }
 }

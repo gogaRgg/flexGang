@@ -43,7 +43,7 @@ namespace SqlServerTestApp
             string nmn = null;
             string nnn = null;
             string mmm = null;
-            try
+           try
             {
                 mm = textBox1.Text;
                 nn = textBox2.Text;
@@ -69,9 +69,7 @@ namespace SqlServerTestApp
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form frm2 = new Изменение();
-            frm2.Show();
-            this.Hide();
+            this.OpenNewForm<Изменение>();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -107,6 +105,11 @@ namespace SqlServerTestApp
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void Изменениеклиента_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.CloseForm();
         }
     }
 }
