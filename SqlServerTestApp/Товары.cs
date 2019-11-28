@@ -59,5 +59,10 @@ namespace SqlServerTestApp
             frm2.Show();
             this.Hide();
         }
+
+        private void Товары_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.CloseForm();
+        }
     }
 }

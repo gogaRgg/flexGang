@@ -82,5 +82,12 @@ where[dbo].[Продавец].[id_продавца] = t.id_продавца and[
         {
 
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form frm2 = new Last();
+            frm2.Show();
+            this.Hide();
+        }
     }
 }

@@ -64,5 +64,11 @@ namespace SqlServerTestApp
             frm2.Show();
             this.Hide();
         }
+
+        private void Изменениетовара_Load(object sender, EventArgs e)
+        {
+
+
+        }
     }
 }

@@ -18,9 +18,7 @@ namespace SqlServerTestApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form frm2 = new Товары();
-            frm2.Show();
-            this.Hide();
+            this.OpenNewForm<Товары>();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -67,6 +65,23 @@ namespace SqlServerTestApp
             Form frm2 = new Продажи();
             frm2.Show();
             this.Hide();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Form frm2 = new Товар_на_складе();
+            frm2.Show();
+            this.Hide();
+        }
+
+        private void JustForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.CloseForm();
+        }
+
+        private void JustForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

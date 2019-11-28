@@ -24,6 +24,7 @@ namespace SqlServerTestApp
         private void Form1_Shown(object sender, EventArgs e)
         {
             this.OpenNewForm<DBConnectionForm>();
+
         }
 
        
@@ -82,10 +83,7 @@ namespace SqlServerTestApp
 
         private void button7_Click_1(object sender, EventArgs e)
         {
-
-            Form frm2 = new JustForm();
-            frm2.Show();
-            this.Hide();
+            this.OpenNewForm<JustForm>();
         }
 
         private void button6_Click(object sender, EventArgs e)

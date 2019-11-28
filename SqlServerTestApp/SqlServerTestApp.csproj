@@ -70,6 +70,12 @@
     <Compile Include="JustForm.Designer.cs">
       <DependentUpon>JustForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Last.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Last.Designer.cs">
+      <DependentUpon>Last.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryComplete.cs">
@@ -162,6 +168,24 @@
     <Compile Include="Склад.Designer.cs">
       <DependentUpon>Склад.cs</DependentUpon>
     </Compile>
+    <Compile Include="Товар в продаже.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Товар в продаже.Designer.cs">
+      <DependentUpon>Товар в продаже.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Товар на складе.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Товар на складе.Designer.cs">
+      <DependentUpon>Товар на складе.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Товары у продавца.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Товары у продавца.Designer.cs">
+      <DependentUpon>Товары у продавца.cs</DependentUpon>
+    </Compile>
     <Compile Include="Товары.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +240,9 @@
     <EmbeddedResource Include="JustForm.resx">
       <DependentUpon>JustForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Last.resx">
+      <DependentUpon>Last.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -269,6 +296,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Склад.resx">
       <DependentUpon>Склад.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Товар в продаже.resx">
+      <DependentUpon>Товар в продаже.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Товар на складе.resx">
+      <DependentUpon>Товар на складе.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Товары у продавца.resx">
+      <DependentUpon>Товары у продавца.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Товары.resx">
       <DependentUpon>Товары.cs</DependentUpon>

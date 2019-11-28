@@ -112,5 +112,10 @@ namespace SqlServerTestApp
             frm2.Show();
             this.Hide();
         }
+
+        private void textBox4_KeyUp(object sender, KeyEventArgs e)
+        {
+
+        }
     }
 }

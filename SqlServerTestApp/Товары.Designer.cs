@@ -126,6 +126,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Товары";
             this.Text = "Товары";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Товары_FormClosed);
             this.Load += new System.EventHandler(this.Товары_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -53,7 +53,7 @@
             // 
             this.button2.Location = new System.Drawing.Point(225, 84);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(70, 29);
+            this.button2.Size = new System.Drawing.Size(61, 29);
             this.button2.TabIndex = 1;
             this.button2.Text = "Вывести";
             this.button2.UseVisualStyleBackColor = true;
@@ -84,9 +84,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(12, 162);
+            this.button3.Location = new System.Drawing.Point(12, 155);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(70, 20);
+            this.button3.Size = new System.Drawing.Size(70, 27);
             this.button3.TabIndex = 5;
             this.button3.Text = "Назад";
             this.button3.UseVisualStyleBackColor = true;

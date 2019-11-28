@@ -83,7 +83,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(113, 147);
+            this.button3.Location = new System.Drawing.Point(12, 147);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 5;
@@ -125,6 +125,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Изменениетовара";
             this.Text = "Изменениетовара";
+            this.Load += new System.EventHandler(this.Изменениетовара_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
