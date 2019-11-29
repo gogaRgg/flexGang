@@ -69,7 +69,7 @@ namespace SqlServerTestApp
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.OpenNewForm<Изменение>();
+            Close();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

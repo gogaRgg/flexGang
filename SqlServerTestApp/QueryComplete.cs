@@ -32,9 +32,7 @@ namespace SqlServerTestApp
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Form frm2 = new Form1();
-            frm2.Show();
-            this.Hide();
+            Close();
         }
 
         private void button2_Click(object sender, EventArgs e)

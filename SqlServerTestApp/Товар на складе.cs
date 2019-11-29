@@ -16,13 +16,8 @@ namespace SqlServerTestApp
             InitializeComponent();
         }
 
-        private void comboBox1_DropDown(object sender, EventArgs e)
-        {
-            string query = "select [id_товара],[название] from [dbo].[Товары]";
-            var list = DBConnectionService.SendQueryToSqlServer(query)?.Select(row => new IdentityItem(row[0], row[1])).ToArray();
-            comboBox1.Items.Clear();
-            comboBox1.Items.AddRange(list);
-        }
+        
+        
 
         private void comboBox2_DropDown(object sender, EventArgs e)
         {
@@ -36,7 +31,7 @@ namespace SqlServerTestApp
         {
             int? cb1 = null;
             int? cb2 = null;
-            int tb1 = null;
+            int? tb1 = null;
             
            
             try
@@ -52,7 +47,7 @@ namespace SqlServerTestApp
                 MessageBox.Show(exc.Message);
             }
 
-            string query = $"insert into dbo.Склад ([id_tovara],[id_склада],[количество]) values ('{cb1}','{cb2}','{tb1}')";
+            string query = $"insert into dbo.[Товар на складе] ([id_tovara],[id_склада],[количество]) values ('{cb1}','{cb2}','{tb1}')";
             int? count = DBConnectionService.SendCommandToSqlServer(query);
             MessageBox.Show("добавлен");
         }
@@ -60,24 +55,38 @@ namespace SqlServerTestApp
         private void button2_Click(object sender, EventArgs e)
         {
             string query = @"SELECT 
-            [адрес]
-            FROM [dbo].[Склад]";
+             [id_склада],[количество]
+            FROM [dbo].[Товар на складе]";
             var list = DBConnectionService.SendQueryToSqlServer(query);
-            FormExtentions.ClearAndAddColumnsInDataGridView(dataGridView1, "адрес");
+            FormExtentions.ClearAndAddColumnsInDataGridView(dataGridView1, "[id_склада]","[количество]");
             foreach (var row in list)
             {
-                dataGridView1.Rows.Add(row[0]);
+                dataGridView1.Rows.Add(row[0], row[1]);
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.OpenNewForm<JustForm>();
+            Close();
         }
 
         private void Товар_на_складе_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.CloseForm();
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_DropDown(object sender, EventArgs e)
+        {
+
+            string query = "select [id_товара],[Название] from [dbo].[Товары]";
+            var list = DBConnectionService.SendQueryToSqlServer(query)?.Select(row => new IdentityItem(row[0], row[1])).ToArray();
+            comboBox1.Items.Clear();
+            comboBox1.Items.AddRange(list);
         }
     }
 }

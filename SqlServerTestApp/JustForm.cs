@@ -34,8 +34,7 @@ namespace SqlServerTestApp
 
         private void button4_Click(object sender, EventArgs e)
         {
-
-            this.OpenNewForm<Form1>();
+            Close();
         }
 
         private void button7_Click(object sender, EventArgs e)

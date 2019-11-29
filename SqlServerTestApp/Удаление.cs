@@ -46,7 +46,7 @@ namespace SqlServerTestApp
 
         private void button7_Click(object sender, EventArgs e)
         {
-            this.OpenNewForm<Form1>();
+            Close();
         }
 
         private void Удаление_FormClosed(object sender, FormClosedEventArgs e)

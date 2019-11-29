@@ -50,7 +50,7 @@ namespace SqlServerTestApp
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            this.OpenNewForm<JustForm>();
+            Close();
         }
         private void Продавцы_Load(object sender, EventArgs e)
         {

@@ -60,7 +60,7 @@ namespace SqlServerTestApp
         private void button3_Click(object sender, EventArgs e)
         {
 
-            this.OpenNewForm<Изменение>();
+            Close();
         }
 
         private void Изменениетовара_Load(object sender, EventArgs e)

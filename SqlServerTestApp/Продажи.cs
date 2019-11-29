@@ -213,7 +213,7 @@ namespace SqlServerTestApp
 
         private void button6_Click(object sender, EventArgs e)
         {
-            this.OpenNewForm<JustForm>();
+            Close();
         }
 
         private void Продажи_FormClosing(object sender, FormClosingEventArgs e)
