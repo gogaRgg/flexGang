@@ -33,8 +33,8 @@ namespace SqlServerTestApp
         private void button2_Click(object sender, EventArgs e)
         {
 
-            string zz = null;
-            
+            string zz=Convert.ToString(textBox1.Text);
+
             try
             {
                 int n = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());

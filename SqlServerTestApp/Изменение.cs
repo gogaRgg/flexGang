@@ -46,7 +46,9 @@ namespace SqlServerTestApp
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            Form frm2 = new Измемениескидки ();
+            frm2.Show();
+            this.Hide();
         }
 
        

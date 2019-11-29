@@ -41,14 +41,15 @@ namespace SqlServerTestApp
         private void button2_Click(object sender, EventArgs e)
         {
             string query = @"SELECT 
+[id_склада],
             [адрес]
             
             FROM [dbo].[Склад]";
             var list = DBConnectionService.SendQueryToSqlServer(query);
-            FormExtentions.ClearAndAddColumnsInDataGridView(dataGridView1, "адрес");
+            FormExtentions.ClearAndAddColumnsInDataGridView(dataGridView1,"id_склада","адрес");
             foreach (var row in list)
             {
-                dataGridView1.Rows.Add(row[0]);
+                dataGridView1.Rows.Add(row[0],row[1]);
             }
         }
 

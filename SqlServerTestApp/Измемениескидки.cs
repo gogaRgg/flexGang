@@ -18,7 +18,10 @@ namespace SqlServerTestApp
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.OpenNewForm<Изменение>();
+
+            Form frm2 = new Изменение();
+            frm2.Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -39,12 +42,12 @@ namespace SqlServerTestApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string mn = null;
-            string nm = null;
+            string mn = Convert.ToString(textBox1.Text);
+            string nm = Convert.ToString(textBox2.Text);
             try
             {
                 int n = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-                string query = "update dbo.Скидки SET [Размер скидки] ='" + mn + "',[Статус пользователя]='" + nm + "' where id_продавца='" + n + "'";
+                string query = "update dbo.Скидки SET [Размер скидки] ='" + mn + "',[Статус пользователя]='" + nm + "' where id_скидки='" + n + "'";
                 int? result = DBConnectionService.SendCommandToSqlServer(query);
                 if (result != null && result > 0)
                 {

@@ -37,12 +37,12 @@ namespace SqlServerTestApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string mm = null;
-            string nn = null;
-            string nmm = null;
-            string nmn = null;
-            string nnn = null;
-            string mmm = null;
+            string mm =Convert.ToString(textBox1.Text);
+            string nn = Convert.ToString(textBox2.Text); 
+            string nmm = Convert.ToString(textBox3.Text); 
+            string nmn = Convert.ToString(textBox4.Text); 
+            string nnn = Convert.ToString(textBox5.Text); 
+            string mmm = Convert.ToString(textBox6.Text); 
            try
             {
                 int kkk = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
