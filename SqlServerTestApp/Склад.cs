@@ -19,9 +19,16 @@ namespace SqlServerTestApp
         private void button1_Click(object sender, EventArgs e)
         {
             string tb1 = textBox1.Text;
-            string query = "INSERT INTO dbo.Склад (адрес) VALUES ('" + tb1 + "')";
-            int? count = DBConnectionService.SendCommandToSqlServer(query);
-            MessageBox.Show("добавлено " + count + "строк");
+            try
+            {
+                string query = "INSERT INTO dbo.Склад (адрес) VALUES ('" + tb1 + "')";
+                int? count = DBConnectionService.SendCommandToSqlServer(query);
+                MessageBox.Show("добавлено " + count + "строк");
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

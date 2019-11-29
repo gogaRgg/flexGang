@@ -23,7 +23,9 @@ namespace SqlServerTestApp
              tb2 = textBox2.Text;
             try
             {
-               
+                string query = "INSERT INTO dbo.Продавец (ФИО,[название магазина]) VALUES ('" + tb1 + "', '" + tb2 + "')";
+                int? count = DBConnectionService.SendCommandToSqlServer(query);
+                MessageBox.Show("добавлено " + count + "строк");
             }
             catch (Exception exc)
             {
@@ -31,9 +33,7 @@ namespace SqlServerTestApp
             }
             
             
-            string query = "INSERT INTO dbo.Продавец (ФИО,[название магазина]) VALUES ('" + tb1 + "', '" + tb2 + "')";
-            int? count = DBConnectionService.SendCommandToSqlServer(query);
-            MessageBox.Show("добавлено " + count + "строк");
+            
            }
             private void button2_Click(object sender, EventArgs e)
            {

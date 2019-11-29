@@ -26,10 +26,17 @@ namespace SqlServerTestApp
             string tb4 = textBox4.Text;
             string tb5 = textBox5.Text;
             string tb6 = textBox6.Text;
-            string query = "INSERT INTO dbo.Клиенты (Фамилия, Имя,Отчество,Телефон,Email,Постоянный) VALUES ('" + tb1 + "', '" + tb2 + "','" + tb3 + "','" + tb4 + "','" + tb5 + "','" + tb6+ "')";
-            int? count = DBConnectionService.SendCommandToSqlServer(query);
-            MessageBox.Show("добавлено " + count + "строк");
-
+            try
+            {
+                string query = "INSERT INTO dbo.Клиенты (Фамилия, Имя,Отчество,Телефон,Email,Постоянный) VALUES ('" + tb1 + "', '" + tb2 + "','" + tb3 + "','" + tb4 + "','" + tb5 + "','" + tb6 + "')";
+                int? count = DBConnectionService.SendCommandToSqlServer(query);
+                MessageBox.Show("добавлено " + count + "строк");
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)

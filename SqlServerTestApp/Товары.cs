@@ -25,10 +25,16 @@ namespace SqlServerTestApp
         {
             string tb1 = textBox1.Text;
             string tb2 = textBox2.Text;
-            string query = "INSERT INTO dbo.Товары (название, Цена) VALUES ('" + tb1 + "', '" + tb2 + "')";
-            int? count = DBConnectionService.SendCommandToSqlServer(query);
-            MessageBox.Show("добавлено " + count + "строк");
-
+            try
+            {
+                string query = "INSERT INTO dbo.Товары (название, Цена) VALUES ('" + tb1 + "', '" + tb2 + "')";
+                int? count = DBConnectionService.SendCommandToSqlServer(query);
+                MessageBox.Show("добавлено " + count + "строк");
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

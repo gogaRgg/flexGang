@@ -46,27 +46,23 @@ namespace SqlServerTestApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int? cb1 = null;
-            int? cb2 = null;
-            int? tb1 = null;
+            int? cb1 = Convert.ToInt32((comboBox1.SelectedItem as IdentityItem)?.Id);
+            int? cb2 = Convert.ToInt32((comboBox2.SelectedItem as IdentityItem)?.Id);
+            int? tb1 = Convert.ToInt32(textBox1.Text);
 
 
             try
             {
-                cb1 = Convert.ToInt32((comboBox1.SelectedItem as IdentityItem)?.Id);
-                cb2 = Convert.ToInt32((comboBox2.SelectedItem as IdentityItem)?.Id);
-                tb1 = Convert.ToInt32(textBox1.Text);
 
-
+                string query = $"insert into dbo.[Товары в продаже] ([id_tovara],[id_продажи],[количество]) values ({cb1},{cb2},'{tb1}')";
+                int? count = DBConnectionService.SendCommandToSqlServer(query);
+                MessageBox.Show("добавлен");
             }
             catch (Exception exc)
             {
                 MessageBox.Show(exc.Message);
             }
 
-            string query = $"insert into dbo.[Товары в продаже] ([id_tovara],[id_продажи],[количество]) values ('{cb1}','{cb2}','{tb1}')";
-            int? count = DBConnectionService.SendCommandToSqlServer(query);
-            MessageBox.Show("добавлен");
         }
 
         private void comboBox1_DropDown(object sender, EventArgs e)

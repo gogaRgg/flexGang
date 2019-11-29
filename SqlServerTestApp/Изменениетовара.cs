@@ -33,12 +33,19 @@ namespace SqlServerTestApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string mn = null;
-            string nm = null;
+            string mn = textBox1.Text;
+            string nm = textBox2.Text;
             try
             {
-                mn = textBox1.Text;
-                nm = textBox2.Text;
+
+                int n = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                string query = "update dbo.Товары SET Цена='" + mn + "',название='" + nm + "' where id_товара='" + n + "'";
+                int? result = DBConnectionService.SendCommandToSqlServer(query);
+                if (result != null && result > 0)
+                {
+                    MessageBox.Show("Updated");
+
+                }
 
             }
             catch(Exception exc)
@@ -47,14 +54,7 @@ namespace SqlServerTestApp
                 return;
             }
 
-            int n = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-            string query = "update dbo.Товары SET Цена='"+mn+"',название='"+nm+"' where id_товара='" +n+ "'" ;
-            int? result = DBConnectionService.SendCommandToSqlServer(query);
-            if (result != null && result > 0)
-            {
-                MessageBox.Show("Updated");
-                
-            }
+           
         }
 
         private void button3_Click(object sender, EventArgs e)

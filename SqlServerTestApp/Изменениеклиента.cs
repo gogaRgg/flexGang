@@ -45,12 +45,13 @@ namespace SqlServerTestApp
             string mmm = null;
            try
             {
-                mm = textBox1.Text;
-                nn = textBox2.Text;
-                nmm = textBox3.Text;
-                nmn = textBox4.Text;
-                nnn = textBox5.Text;
-                mmm = textBox6.Text;
+                int kkk = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+                string query = "update dbo.Клиенты SET Имя='" + mm + "',Фамилия='" + nn + "',Отчество='" + nmm + "',Телефон='" + nmn + "',Email ='" + nnn + "',Постоянный='" + mmm + "' where [id_клиента]='" + kkk + "'";
+                int? result = DBConnectionService.SendCommandToSqlServer(query);
+                if (result != null && result > 0)
+                {
+                    MessageBox.Show("Updated");
+                }
             }
             catch (Exception exc)
             {
@@ -58,13 +59,7 @@ namespace SqlServerTestApp
                 return;
             }
 
-            int kkk = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-            string query = "update dbo.Клиенты SET Имя='" + mm + "',Фамилия='" + nn + "',Отчество='" + nmm + "',Телефон='" + nmn + "',Email ='" + nnn + "',Постоянный='" + mmm + "' where [id_клиента]='" + kkk + "'";
-            int? result = DBConnectionService.SendCommandToSqlServer(query);
-            if (result != null && result > 0)
-            {
-                MessageBox.Show("Updated");
-            }
+           
         }
 
         private void button3_Click(object sender, EventArgs e)
